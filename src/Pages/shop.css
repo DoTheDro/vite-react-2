@@ -1,0 +1,35 @@
+.products .product-list {
+    width: 25%;
+    display: inline-flex;
+    min-height: 500px;
+}
+
+.products .product-list .item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px;
+    padding: 10px;
+    text-align: center;
+    height: inherit;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 3px 3px 15px #9b9b9b;
+}
+
+.products .product-list .item .product-image {
+    width: 70%;
+    height: 270px;
+}
+
+.products .product-list .item .product-name {
+    font-size: 1em;
+    color: #000;
+}
+
+.products .product-list .item .product-price {
+    font-weight: bold;
+    color: #5a5a5a;
+}

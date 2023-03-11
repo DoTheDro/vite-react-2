@@ -1,0 +1,22 @@
+header nav {
+    padding-bottom: 30px;
+}
+
+nav .site-logo,
+nav .site-links {
+    width: 50%;
+    display: inline-block;
+}
+
+nav .site-logo {
+    font-size: 2em;
+}
+
+nav .site-links {
+    text-align: end;
+    font-size: 1.2em;
+}
+
+nav .site-links a {
+    padding: 0 20px
+}

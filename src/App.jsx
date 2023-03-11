@@ -1,33 +1,47 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import { useState, useEffect } from 'react'
+import { 
+  createBrowserRouter,
+  createRoutesFromElements,
+  Routes,
+  Route,
+  RouterProvider,
+  Outlet
+} from 'react-router-dom'
 import './App.css'
+import useFetch from './useFetch'
+
+//Page
+import Navbar from './Pages/Navbar'
+import Home from './Pages/Home'
+import Shop from './Pages/Shop'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [products, setProducts] = useState([])
+
+  useEffect(() => {
+    fetch('https://fakestoreapi.com/products').then(res => {
+    if (res.ok) {
+      return res.json()
+    } else {
+      console.log("Failed to fetch API")
+    }
+  }).then(data => {
+    setProducts(data)
+  })
+  }, [])
+
+
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path='/' element={<Navbar />}>
+        <Route index element={<Home />} />
+        <Route path='shop' element={<Shop currentProducts={products} />} />
+      </Route>
+    )
+  )
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="./public/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+    <RouterProvider router={router} />
   )
 }
 
