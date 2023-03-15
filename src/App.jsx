@@ -33,7 +33,7 @@ function App() {
 
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path='/' element={<Navbar />}>
+      <Route path='/vite-react-2/' element={<Navbar />}>
         <Route index element={<Home />} />
         <Route path='shop' element={<Shop currentProducts={products} />} />
       </Route>

@@ -12,12 +12,12 @@ const Navbar = () => {
             <header>
                 <nav>
                     <div className="site-logo">
-                        <Link to='/'>
+                        <Link to='/vite-react-2'>
                         Sample
                         </Link>
                     </div>
                     <div className="site-links">
-                        <NavLink to="/">Home</NavLink>
+                        <NavLink to="/vite-react-2">Home</NavLink>
                         <NavLink to="shop">Shop</NavLink>
                     </div>
                 </nav>
