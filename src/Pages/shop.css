@@ -1,7 +1,7 @@
 .products .product-list {
     width: 25%;
     display: inline-flex;
-    min-height: 500px;
+    min-height: 440px;
 }
 
 .products .product-list .item {
@@ -20,8 +20,8 @@
 }
 
 .products .product-list .item .product-image {
-    width: 70%;
-    height: 270px;
+    width: 60%;
+    height: 210px;
 }
 
 .products .product-list .item .product-name {

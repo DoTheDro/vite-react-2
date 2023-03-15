@@ -1,41 +1,37 @@
-import { useState, useEffect } from 'react'
 import { 
   createBrowserRouter,
   createRoutesFromElements,
-  Routes,
   Route,
   RouterProvider,
-  Outlet
 } from 'react-router-dom'
 import './App.css'
 import useFetch from './useFetch'
 
 //Page
+import ShopLayout from './Pages/ShopLayout'
 import Navbar from './Pages/Navbar'
 import Home from './Pages/Home'
-import Shop from './Pages/Shop'
+import Shop, { shopLoader } from './Pages/Shop'
+import ViewProduct, { viewProductLoader } from './Pages/ViewProduct'
 
 function App() {
-  const [products, setProducts] = useState([])
-
-  useEffect(() => {
-    fetch('https://fakestoreapi.com/products').then(res => {
-    if (res.ok) {
-      return res.json()
-    } else {
-      console.log("Failed to fetch API")
-    }
-  }).then(data => {
-    setProducts(data)
-  })
-  }, [])
-
 
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path='/vite-react-2/' element={<Navbar />}>
         <Route index element={<Home />} />
-        <Route path='shop' element={<Shop currentProducts={products} />} />
+        <Route path='shop' element={<ShopLayout />}>
+          <Route 
+            index
+            element={<Shop />} 
+            loader={shopLoader}
+          />
+          <Route
+            path=':id'
+            element={<ViewProduct />} 
+            loader={viewProductLoader}
+          />
+        </Route>
       </Route>
     )
   )
