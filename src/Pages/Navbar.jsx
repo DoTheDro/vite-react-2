@@ -13,7 +13,7 @@ const Navbar = () => {
                 <nav>
                     <div className="site-logo">
                         <Link to='/vite-react-2'>
-                        Sample
+                        D-Store
                         </Link>
                     </div>
                     <div className="site-links">

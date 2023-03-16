@@ -1,5 +1,5 @@
 header nav {
-    padding-bottom: 30px;
+    padding: 0 15px 30px
 }
 
 nav .site-logo,
@@ -18,5 +18,5 @@ nav .site-links {
 }
 
 nav .site-links a {
-    padding: 0 20px
+    padding: 0 10px
 }
