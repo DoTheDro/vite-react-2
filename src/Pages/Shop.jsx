@@ -75,6 +75,16 @@ const Shop = () => {
             categoryChoices.push(key)
         }
     }
+    
+    categoryChoices.sort((a, b) => {
+        if (a < b) {
+            return - 1 
+        } else if (a > b) {
+            return 1
+        } else {
+            return 0
+        }
+    })
 
     const categoryChoice = categoryChoices.map((choice) => {
         return (
@@ -159,6 +169,12 @@ const Shop = () => {
                 </select>
             </div>
             <div className="products">
+                <select value={sortChoice} onChange={handleSelect}>
+                    <option value="" disabled hidden>Sort By</option>
+                    <option value="title">By Name</option>
+                    <option value="rating">By Rating</option>
+                    <option value="price">By Price</option>
+                </select>
                 {
                 isSelected 
                     ? <div>{notFilteredProduct}</div>
