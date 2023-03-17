@@ -3,21 +3,63 @@ import { Link, useLoaderData } from "react-router-dom"
 import './shop.css'
 
 const Shop = () => {
+    //react router useLoaderData
+    const productItems = useLoaderData()
+
     //storing selected category
     const [ selectedCategory, setSelectedCategory ] = useState([])
 
     //checking if selected a category
     const isSelected = selectedCategory.length === 0
 
-    //react router useLoaderData
-    const productItems = useLoaderData()
+    //sort choice
+    const [ sortChoice, setSortChoice ] = useState('')
+
+    if (sortChoice.length !== 0) {
+        if (sortChoice === "title") {
+            productItems.sort((a, b) => {
+                if (a.title.toLowerCase() < b.title.toLowerCase()) {
+                    return -1
+                } else if (a.title.toLowerCase() < b.title.toLowerCase()) {
+                    return 1
+                } else {
+                    return 0
+                }
+            })
+        } else if (sortChoice === "price") {
+            productItems.sort((a, b) => {
+                if (a.price < b.price) {
+                    return -1
+                } else if (a.price > b.price) {
+                    return 1
+                } else {
+                    return 0
+                }
+            })
+        } else if (sortChoice === "rating") {
+            productItems.sort((a, b) => {
+                if (a.rating.rate < b.rating.rate) {
+                    return -1
+                } else if (a.rating.rate > b.rating.rate) {
+                    return 1
+                } else {
+                    return 0
+                }
+            })
+        }
+    }
 
     //for listing category
     const categoryChoices = []
 
-    //changing state
+    //changing state for category
     const handleRadioBtn = (e) => {
         return setSelectedCategory(e.target.value)
+    }
+
+    //changing state for sort
+    const handleSelect = (e) => {
+        return setSortChoice(e.target.value);
     }
     
     //getting categories
@@ -48,9 +90,9 @@ const Shop = () => {
     })
 
     //filtering product if selected a category
-    const filtering = productItems.filter((currentProduct) => {
-        if (currentProduct.category === selectedCategory) {
-            return currentProduct
+    const filtering = productItems.filter((filtered) => {
+        if (filtered.category === selectedCategory) {
+            return filtered
         }
     })
 
@@ -81,7 +123,6 @@ const Shop = () => {
         )
     })
 
-
     //for opening filter panel
     const openFilterPanel = () => {
         document.getElementById('filter-panel-mobile').classList.add('show')
@@ -110,7 +151,12 @@ const Shop = () => {
             </div>
             <div className="category-column">
                 <button className="btn-filter" onClick={openFilterPanel}>Filter</button>
-                <button className="btn-sort">Sort</button>
+                <select value={sortChoice} onChange={handleSelect}>
+                    <option value="" disabled hidden>Sort By</option>
+                    <option value="title">By Name</option>
+                    <option value="rating">By Rating</option>
+                    <option value="price">By Price</option>
+                </select>
             </div>
             <div className="products">
                 {
