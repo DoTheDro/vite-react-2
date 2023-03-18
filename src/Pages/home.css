@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     height: 43em;
-    background-image: url('../src/assets/hero-section-bg.jpg'), linear-gradient(rgba(74, 74, 74, 0.4), rgba(74, 74, 74, 1));
+    background-image: url('src/assets/hero-section-bg.jpg'), linear-gradient(rgba(74, 74, 74, 0.4), rgba(74, 74, 74, 1));
     background-position: center;
     background-size: cover;
     background-blend-mode: overlay;
