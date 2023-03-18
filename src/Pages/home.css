@@ -1,0 +1,28 @@
+.first-section {
+    justify-content: center;
+    text-align: center;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    height: 43em;
+    background-image: url('../src/assets/hero-section-bg.jpg'), linear-gradient(rgba(74, 74, 74, 0.4), rgba(74, 74, 74, 1));
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+
+.first-section h1 {
+    margin: 0;
+    color: #FFF;
+    font-size: 3em;
+}
+
+.first-section p {
+    color: #FFF;
+}
+
+@media screen and (min-width: 769px) {
+    .first-section {
+        text-align: left;
+    }
+}

@@ -1,5 +1,18 @@
+header {
+    background: #FFF;
+    width: 100%;
+    box-shadow: 0 0 7px 2px #b3b3b3;
+    position: fixed;
+    z-index: 2;
+}
+
 header nav {
-    padding: 0 15px 30px
+    max-width: 1280px;
+    margin: auto;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
 }
 
 nav .site-logo,
@@ -19,4 +32,8 @@ nav .site-links {
 
 nav .site-links a {
     padding: 0 10px
+}
+
+main {
+    padding-top: 70px;
 }

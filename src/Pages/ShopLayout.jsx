@@ -2,10 +2,8 @@ import { Outlet } from "react-router-dom"
 
 const ShopLayout = () => {
     return (
-        <div>
-        
+        <div className="shop-container">
             <Outlet />
-    
         </div>
 
     )
