@@ -162,6 +162,10 @@
 }
 
 @media screen and (min-width: 769px) {
+    .shop-container {
+        padding-top: 30px;
+    }
+
     .products select {
         display: flex;
     }
@@ -193,6 +197,7 @@
     .shop-content #filter-panel-desktop {
         display: block;
         width: 25%;
+        padding-left: 15px;
     }
 
     .shop-content .category-column {
@@ -201,6 +206,7 @@
 
     .shop-content .products {
         width: 75%;
+        padding-right: 15px;
     }
 
     .category-column select {

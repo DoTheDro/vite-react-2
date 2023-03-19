@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     height: 43em;
-    background-image: url('/src/assets/hero-section-bg.jpg'), linear-gradient(rgba(74, 74, 74, 0.4), rgba(74, 74, 74, 1));
+    background-image: url('/src/assets/images/hero-section-bg.jpg'), linear-gradient(rgba(74, 74, 74, 0.4), rgba(74, 74, 74, 1));
     background-position: center;
     background-size: cover;
     background-blend-mode: overlay;
@@ -21,8 +21,186 @@
     color: #FFF;
 }
 
+.second-section h2{
+    color: #FFF;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.second-section a {
+    padding: 15px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #911F21;
+    color: #FFF;
+    border-radius: 5px;
+    width: 140px;
+}
+
+.second-section button:hover {
+    border-color: #911F21;
+}
+
+.second-section .shop-by-wearables {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 38em;
+    flex-direction: column;
+    gap: 2.5em;
+    background-image: url('/src/assets/images/wearables-img.jpg'), linear-gradient(rgba(76, 76, 76, 0.4), rgba(46, 46, 46, 1));
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+}
+
+.second-section .shop-by-appliances {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 38em;
+    flex-direction: column;
+    gap: 2.5em;
+    background-image: url('/src/assets/images/appliances-img.jpg'), linear-gradient(rgba(76, 76, 76, 0.4), rgba(46, 46, 46, 1));
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+}
+
+.third-section {
+    padding: 50px 15px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.third-section img {
+    width: 100%;
+}
+
+.third-section .third-left-col-container {
+    text-align: center;
+}
+
+.fourth-section {
+    padding: 50px 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: #911F21;
+}
+
+.fourth-section img {
+    width: 100%;
+}
+
+.fourth-section .fourth-right-col-container {
+    text-align: center;
+    color: #FFF;
+}
+
+.fifth-section {
+    padding: 50px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3em;
+}
+
+.fifth-section .fifth-header{
+    text-align: center;
+}
+
+.fifth-section .icon-container {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.fifth-section img {
+    width: 32px;
+    height: 32px;
+}
+
+@media screen and (min-width: 426px) {
+    .third-section {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        min-height: 24em;
+        height: 100%;
+    }
+
+    .third-section .third-left-col-container{
+        text-align: left;
+        width: 50%;
+    }
+
+    .third-section .third-right-col-container {
+        width: 50%;
+    }
+
+    .fourth-section {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        min-height: 24em;
+        height: 100%;
+    }
+
+    .fourth-section .fourth-left-col-container {
+        width: 50%;
+    }
+
+    .fourth-section .fourth-right-col-container {
+        width: 50%;
+        text-align: left;
+    }
+}
+
 @media screen and (min-width: 769px) {
     .first-section {
         text-align: left;
     }
+
+    .second-section {
+        display: flex;
+    }
+
+    .second-section a:hover {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #FFF;
+        transition: .4s;
+        transform: scale(1.2);
+    }
+
+    .second-section .shop-by-wearables {
+        width: 50%;
+    }
+
+    .second-section .shop-by-appliances {
+        width: 50%;
+    }
+
+    .third-section .third-left-col-container {
+        padding-right: 30px;
+        max-width: 800px;
+    }
+
+    .third-right-col-container {
+        max-width: 600px;
+    }
+
+    .fourth-section .fourth-left-col-container {
+        max-width: 600px;
+    }
+
+    .fourth-section .fourth-right-col-container {
+        padding-left: 30px;
+        max-width: 800px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+
 }

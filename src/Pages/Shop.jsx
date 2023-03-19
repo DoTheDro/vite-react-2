@@ -188,6 +188,7 @@ const Shop = () => {
 export default Shop
 
 export const shopLoader = async () => {
+
     const res = await fetch('https://fakestoreapi.com/products')
 
     return res.json()

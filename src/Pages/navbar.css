@@ -6,6 +6,10 @@ header {
     z-index: 2;
 }
 
+header a {
+    color: #911F21;
+}
+
 header nav {
     max-width: 1280px;
     margin: auto;
@@ -25,6 +29,10 @@ nav .site-logo {
     font-size: 2em;
 }
 
+nav .site-logo a:hover {
+    color:#911F21;
+}
+
 nav .site-links {
     text-align: end;
     font-size: 1.2em;
@@ -36,4 +44,11 @@ nav .site-links a {
 
 main {
     padding-top: 70px;
+}
+
+@media screen and (min-width: 769px) {
+    nav .site-links a:hover {
+        color: #911F21;
+        border-bottom: 2px solid #911F21;
+    }
 }
