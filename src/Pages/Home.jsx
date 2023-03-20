@@ -39,13 +39,13 @@ const Home = () => {
                 </div>
                 
                 <div className="third-right-col-container">
-                    <img src={appPng} alt='appliance image' />
+                    <img src={appliancesPng} alt='appliance image' />
                 </div>
             </section>
 
             <section className="fourth-section">
                 <div className="fourth-left-col-container">
-                    <img src='./src/assets/images/wearables-img.jpg' alt='wearable image' />
+                    <img src={wearablesPng} alt='wearable image' />
                 </div>
 
                 <div className="fourth-right-col-container">
@@ -57,8 +57,8 @@ const Home = () => {
             <section className="fifth-section">
                 <h2 className="fifth-header">Get In Touch With US</h2>
                 <div className="icon-container">
-                    <img src="./src/assets/images/icon-facebook.png" alt="facebook icon" />
-                    <img src="./src/assets/images/icon-gmail.png" alt="gmail icon" />
+                    <img src={iconFacebook} alt="facebook icon" />
+                    <img src={iconGmail} alt="gmail icon" />
                 </div>
             </section>
         </div>
