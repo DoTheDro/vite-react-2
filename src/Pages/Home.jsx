@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom'
-import appPng from '../assets/images/appliances-image.png'
+import appliancesPng from '../assets/images/appliances-image.png'
+import wearablesPng from '../assets/images/wearables-image.png'
+import iconFacebook from '../assets/images/icon-facebook.png'
+import iconGmail from '../assets/images/icon-gmail.png.png'
 import './home.css'
 
 const Home = () => {
