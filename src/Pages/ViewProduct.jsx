@@ -7,6 +7,8 @@ const ViewProduct = () => {
 
     return (
         <div className="about-product">
+            <title>{singleProduct.title}</title>
+
             <div className="product-image">
                 <img src={singleProduct.image} alt={singleProduct.title} />
             </div>

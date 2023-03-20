@@ -9,6 +9,8 @@ const Home = () => {
 
     return (
         <div className='home-container'>
+            <title>Home</title>
+        
             <section className="first-section">
                 <div className="hero-section-content">
                     <h1 className="hero-section-header">Lorem Ipsum</h1>
