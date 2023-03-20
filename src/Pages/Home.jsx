@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import appPng from '../assets/images/appliances-image.png'
 import './home.css'
 
 const Home = () => {
@@ -35,7 +36,7 @@ const Home = () => {
                 </div>
                 
                 <div className="third-right-col-container">
-                    <img src='./src/assets/images/appliances-image.png' alt='appliance image' />
+                    <img src={appPng} alt='appliance image' />
                 </div>
             </section>
 
