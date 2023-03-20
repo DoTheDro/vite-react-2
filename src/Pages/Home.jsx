@@ -41,7 +41,7 @@ const Home = () => {
 
             <section className="fourth-section">
                 <div className="fourth-left-col-container">
-                    <img src='src/assets/images/wearables-image.png' alt='wearable image' />
+                    <img src='/src/assets/images/wearables-img.jpg' alt='wearable image' />
                 </div>
 
                 <div className="fourth-right-col-container">
