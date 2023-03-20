@@ -1,8 +1,5 @@
 import { Link } from 'react-router-dom'
-import appliancesPng from '../assets/images/appliances-image.png'
-import wearablesPng from '../assets/images/wearables-image.png'
-import iconFacebook from '../assets/images/icon-facebook.png'
-import iconGmail from '../assets/images/icon-gmail.png.png'
+import appPng from '../assets/images/appliances-image.png'
 import './home.css'
 
 const Home = () => {
@@ -39,13 +36,13 @@ const Home = () => {
                 </div>
                 
                 <div className="third-right-col-container">
-                    <img src={appliancesPng} alt='appliance image' />
+                    <img src={appPng} alt='appliance image' />
                 </div>
             </section>
 
             <section className="fourth-section">
                 <div className="fourth-left-col-container">
-                    <img src={wearablesPng} alt='wearable image' />
+                    <img src='./src/assets/images/wearables-img.jpg' alt='wearable image' />
                 </div>
 
                 <div className="fourth-right-col-container">
@@ -57,8 +54,8 @@ const Home = () => {
             <section className="fifth-section">
                 <h2 className="fifth-header">Get In Touch With US</h2>
                 <div className="icon-container">
-                    <img src={iconFacebook} alt="facebook icon" />
-                    <img src={iconGmail} alt="gmail icon" />
+                    <img src="./src/assets/images/icon-facebook.png" alt="facebook icon" />
+                    <img src="./src/assets/images/icon-gmail.png" alt="gmail icon" />
                 </div>
             </section>
         </div>
