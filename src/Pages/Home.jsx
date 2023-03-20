@@ -4,12 +4,15 @@ import wearablesPng from '../assets/images/wearables-image.png'
 import iconFacebook from '../assets/images/icon-facebook.png'
 import iconGmail from '../assets/images/icon-gmail.png'
 import './home.css'
+import { Helmet } from 'react-helmet'
 
 const Home = () => {
 
     return (
         <div className='home-container'>
-            <title>Home</title>
+            <Helmet>
+                <title>Home</title>
+            </Helmet>
         
             <section className="first-section">
                 <div className="hero-section-content">
