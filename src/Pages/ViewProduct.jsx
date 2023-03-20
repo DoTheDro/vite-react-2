@@ -1,5 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom"
 import './viewproduct.css'
+import { Helmet } from "react-helmet"
 
 const ViewProduct = () => {
     const { id } = useParams()
@@ -7,6 +8,9 @@ const ViewProduct = () => {
 
     return (
         <div className="about-product">
+            <Helmet>
+                <title>{singleProduct.title}</title>
+            </Helmet>
             <div className="product-image">
                 <img src={singleProduct.image} alt={singleProduct.title} />
             </div>
